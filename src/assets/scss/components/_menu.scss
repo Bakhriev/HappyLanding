@@ -32,30 +32,6 @@
 	text-transform: capitalize;
 }
 
-.menu {
-	& > li {
-		@include hover {
-			& > a {
-				background-color: $orange;
-			}
-		}
-		&:active {
-			& > a {
-				background-color: $orange;
-			}
-		}
-	}
-}
-.menu {
-	& > li {
-		@include hover {
-			&::after {
-				transform: rotate(180deg);
-			}
-		}
-	}
-}
-
 .menu-item.menu-item-has-children a {
 	display: block;
 	position: relative;
@@ -86,6 +62,31 @@
 	visibility: hidden;
 	@media screen and (max-width: 992px) {
 		display: none;
+	}
+}
+
+// States hover
+.menu {
+	& > li {
+		@include hover {
+			& > a {
+				background-color: $orange;
+			}
+		}
+		&:active {
+			& > a {
+				background-color: $orange;
+			}
+		}
+	}
+}
+.menu {
+	& > li {
+		@include hover {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
 	}
 }
 
@@ -152,6 +153,7 @@
 
 .sub-menu > .menu-item > a {
 	text-decoration: none;
+
 	display: block;
 	padding: 12px 10px;
 	color: #fff;
