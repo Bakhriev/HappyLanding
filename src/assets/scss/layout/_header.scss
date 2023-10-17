@@ -1,69 +1,3 @@
-// .header {
-// 	padding: 20px 0;
-
-// 	// .header__container
-
-// 	&__container {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: space-between;
-
-// 		gap: 20px;
-// 	}
-// }
-
-// .mobile-menu {
-// 	&.active {
-// 		transform: translateX(0);
-// 	}
-
-// 	// Mobile Menu Styles
-// 	@media screen and (max-width: $medium) {
-// 		display: flex;
-// 		flex-direction: column;
-
-// 		position: fixed;
-// 		right: 0;
-// 		top: 0;
-
-// 		max-width: 320px;
-// 		min-width: 300px;
-
-// 		width: 100%;
-// 		height: 100%;
-// 		padding: 50px 15px 20px 15px;
-
-// 		overflow-y: auto;
-// 		overflow-x: hidden;
-
-// 		z-index: $mobileMenuIndex;
-
-// 		transform: translateX(100%);
-// 		transition: transform 250ms ease-in-out;
-
-// 		background-color: #fff;
-// 	}
-// }
-
-// .menu {
-// 	margin: 0;
-// 	padding: 0;
-// 	list-style: none;
-
-// 	display: flex;
-// 	align-items: center;
-// 	flex-wrap: wrap;
-
-// 	gap: 20px 20px;
-// 	// .nav-menu__link
-
-// 	&__link {
-// 		text-decoration: none;
-// 	}
-// }
-
-//
-
 .header {
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -73,11 +7,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media screen and (max-width: 992px) {
+			justify-content: stretch;
+		}
 	}
 
 	// .header__actions
 
 	&__actions {
+		@media screen and (max-width: 992px) {
+			margin-left: auto;
+			margin-right: 20px;
+		}
+		@media screen and (max-width: 450px) {
+			margin-right: 10px;
+			gap: 10px 10px;
+		}
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -88,6 +33,10 @@
 
 	&__link {
 		padding: 17px 20px;
+		@media screen and (max-width: 992px) {
+			padding: 12px 10px;
+			font-size: 12px;
+		}
 
 		color: $blue;
 		font-size: 16px;
@@ -117,6 +66,13 @@
 	&__link--help {
 		position: relative;
 		border: none;
+		@media screen and (max-width: 992px) {
+			height: 42px;
+			width: 48px;
+			span {
+				display: none;
+			}
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -124,6 +80,9 @@
 			transform: translateY(-50%);
 			left: 12px;
 			width: 30px;
+			@media screen and (max-width: 992px) {
+				left: 8px;
+			}
 			height: 30px;
 			background-image: url('../img/headphones.png');
 			background-size: cover;
@@ -146,4 +105,12 @@
 .container {
 }
 .logo {
+	display: block;
+	flex-shrink: 0;
+	@media screen and (max-width: 992px) {
+		width: 220px;
+	}
+	@media screen and (max-width: 450px) {
+		width: 130px;
+	}
 }
