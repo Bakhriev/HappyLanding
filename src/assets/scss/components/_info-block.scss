@@ -1,0 +1,37 @@
+.info-block {
+	padding: 25px 0;
+
+	&__container {
+		max-width: 1150px;
+		padding: 0 15px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 42px;
+	}
+}
+.info-item {
+	&:not(:last-child) {
+		padding-right: 52px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			width: 10px;
+			height: 10px;
+			background-image: url('../img/heart.svg');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+
+	color: #a2a8ca;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+}
