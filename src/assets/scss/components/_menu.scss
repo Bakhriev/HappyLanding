@@ -9,7 +9,11 @@
 }
 
 .menu .menu-item-has-children {
+	padding: 8px 24px;
 	padding-right: 34px;
+	& > a {
+		padding: 0;
+	}
 }
 
 .navbar .menu > li {
@@ -20,13 +24,15 @@
 
 .menu > li {
 	position: relative;
-	padding: 8px 24px;
 	border-radius: 6px;
 	background: $blue;
 	transition: background-color 150ms ease-in-out;
 }
 
 .menu > li > a {
+	display: block;
+	padding: 8px 24px;
+
 	position: relative;
 	z-index: 1;
 	text-decoration: none;

@@ -113,10 +113,18 @@
 .card-link {
 	display: block;
 	border-radius: 9px;
-	background: #e2e5fb;
 	padding: 16px 24px 14px 24px;
 
+	background: #e2e5fb;
 	color: #2538a6;
+	transition:
+		color 300ms ease-in-out,
+		background-color 300ms ease-in-out;
+	@include hover {
+		color: #fff;
+		background-color: $orange;
+	}
+
 	text-align: center;
 	font-family: Nunito Sans;
 	font-size: 13px;
