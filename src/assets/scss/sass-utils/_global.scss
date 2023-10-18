@@ -144,3 +144,46 @@ h6 {
 	letter-spacing: -0.36px;
 	text-transform: uppercase;
 }
+
+// Ol style for all page
+ol {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: section;
+	li {
+		padding-left: 56px;
+		position: relative;
+		span {
+			font-weight: 700;
+		}
+
+		color: #6a677d;
+
+		font-family: Nunito Sans;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%;
+
+		&::before {
+			counter-increment: section;
+			content: counter(section) '.';
+			position: absolute;
+			top: 0;
+			left: 24px;
+			width: 0;
+			height: 0;
+
+			color: #ff4104;
+			font-family: Nunito Sans;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 24px;
+		}
+	}
+}
