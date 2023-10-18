@@ -119,3 +119,20 @@
 		width: 130px;
 	}
 }
+@media screen and (max-width: 992px) {
+	.navbar {
+		.menu {
+			.menu-item {
+				border-bottom: 1px solid rgba(224, 227, 251, 0.57);
+				background-color: transparent;
+				border-radius: 0;
+			}
+		}
+		.sub-menu {
+			background-color: rgba(255, 255, 255, 0.1);
+			.menu-item {
+				border: none;
+			}
+		}
+	}
+}
