@@ -1,0 +1,128 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px 0;
+	@media screen and (max-width: 992px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 500px) {
+		grid-template-columns: 1fr;
+	}
+}
+.card {
+	padding: 16px 16px 0 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	border-right: 1px solid #f0f2ff;
+	// .card__top
+
+	&__top {
+	}
+
+	// .card__img
+
+	&__img {
+		margin-bottom: 24px;
+		width: 138px;
+		height: 80px;
+		border-radius: 6px;
+		background: #f0f2ff;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	// .card__body
+
+	&__body {
+		flex-shrink: 1;
+	}
+
+	// .card__bottom
+
+	&__bottom {
+	}
+}
+.card-info {
+	// .card-info__title
+
+	&__title {
+		margin-bottom: 8px;
+		color: #2538a6;
+		text-align: center;
+		font-family: Nunito Sans;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 115%;
+		letter-spacing: -0.4px;
+		text-transform: capitalize;
+	}
+
+	// .card-info__subtitle
+
+	&__subtitle {
+		color: $orange;
+		text-align: center;
+		font-family: Nunito Sans;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 115%;
+		letter-spacing: -0.32px;
+		text-transform: uppercase;
+	}
+}
+.card-price {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: center;
+	// .card-price__num
+
+	&__num {
+		color: #212121;
+		text-align: center;
+		font-family: Nunito Sans;
+		font-size: 26px;
+
+		font-weight: 700;
+		line-height: 125%;
+	}
+
+	// .card-price__count
+
+	&__count {
+		padding: 5px 0;
+		border-radius: 20px;
+		border: 1px solid #ff4104;
+		width: 92px;
+		color: #ff4104;
+		text-align: center;
+		font-family: Nunito Sans;
+		font-size: 16px;
+
+		font-weight: 400;
+		line-height: 125%;
+	}
+}
+.card-link {
+	display: block;
+	border-radius: 9px;
+	background: #e2e5fb;
+	padding: 16px 24px 14px 24px;
+
+	color: #2538a6;
+	text-align: center;
+	font-family: Nunito Sans;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.26px;
+	text-transform: uppercase;
+	text-decoration: none;
+}

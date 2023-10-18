@@ -12,16 +12,18 @@
 	padding-right: 34px;
 }
 
+.navbar .menu > li {
+	@media screen and (max-width: 992px) {
+		width: 100%;
+	}
+}
+
 .menu > li {
 	position: relative;
 	padding: 8px 24px;
 	border-radius: 6px;
 	background: $blue;
 	transition: background-color 150ms ease-in-out;
-
-	@media screen and (max-width: 992px) {
-		width: 100%;
-	}
 }
 
 .menu > li > a {
@@ -40,7 +42,7 @@
 	content: '';
 	position: absolute;
 	right: 16px;
-	top: 12px;
+	top: 16px;
 	width: 8px;
 	height: 8px;
 	background-image: url('../img/arrow-bottom.svg');
