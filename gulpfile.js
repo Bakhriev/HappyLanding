@@ -153,7 +153,6 @@ function js() {
 				},
 			})
 		)
-		.pipe(webpack(require('./webpack.config')))
 		.pipe(dest(path.build.js))
 		.pipe(browserSync.reload({stream: true}))
 }
