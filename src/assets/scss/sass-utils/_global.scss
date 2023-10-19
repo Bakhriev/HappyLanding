@@ -5,7 +5,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 150%;
-	background: linear-gradient(140deg, #e4e7fb 4.06%, #d7dcfa 100%);
+	background-color: #fff;
 }
 
 .wrapper {
@@ -16,10 +16,6 @@ body {
 
 	overflow: hidden;
 
-	border-radius: 32px;
-	@media screen and (max-width: 1200px) {
-		border-radius: 0;
-	}
 	background: #fff;
 }
 
