@@ -190,3 +190,10 @@ ol {
 		}
 	}
 }
+
+.pt-40 {
+	padding-top: 40px;
+	@media screen and (max-width: 992px) {
+		padding-top: 20px;
+	}
+}
