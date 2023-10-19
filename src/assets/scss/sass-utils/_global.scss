@@ -17,6 +17,9 @@ body {
 	overflow: hidden;
 
 	border-radius: 32px;
+	@media screen and (max-width: 1200px) {
+		border-radius: 0;
+	}
 	background: #fff;
 }
 
